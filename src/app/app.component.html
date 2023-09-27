@@ -1,6 +1,6 @@
 <button (click)="getUser()">Click</button>
 <br />
-<input type="text" [(ngModel)]="term" placeholder="term" />
+<!-- <input type="text" [(ngModel)]="term" placeholder="term" /> -->
 <table border="2">
   <th>Attachment</th>
   <th>Date</th>
@@ -12,7 +12,7 @@
 
   <tr
     [ngStyle]="{ color: d.spl_instruction === 'fine' ? 'red' : '' }"
-    *ngFor="let d of data | filter: term"
+    *ngFor="let d of data "
   >
     <td>{{ d.attachment }}</td>
     <td>{{ d.date | date: mm:dd:yyyy }}</td>
